@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: raw_1
+    database: raw_analytics
+    schema: raw
+
+    tables:
+      - name: raw_customers
+      - name: raw_orders
+      - name: raw_payments
+
+
+
+
+
+
+
+
+      
+
+
+
+
