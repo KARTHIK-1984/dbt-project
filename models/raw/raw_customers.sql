@@ -1,6 +1,12 @@
-select id, first_name, last_name
-from {{ source('raw_1', 'raw_customers') }}
-
+with raw_customers as 
+(
+ select * from {{ source('raw_1', 'raw_customers') }}            
+)
+select 
+  id,
+  first_name,
+  last_name
+from raw_customers 
 
 
     -- orders:

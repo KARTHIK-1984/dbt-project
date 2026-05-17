@@ -18,10 +18,22 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
+models:
+  dbt_training:
+    raw:
+      +materialized: view
+      +database: raw_analytics
+      +schema: raw
+    stage:
+      +materialized: table
+      +database: stg_analytics
+      +schema: stg
+
+
 seeds:
   dbt-project:
     +database: raw_analytics
-    +schema: raw
+    # +schema: raw
 
     customer:
       +column_types:
